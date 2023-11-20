@@ -18,7 +18,6 @@ begin
   end;
   writeln;
 
-  { Удаление первого пол. элемента }
   PosInd := 0;
   for i := 1 to 20 do
   begin
@@ -37,7 +36,6 @@ begin
     end;
   end;
 
-  { Находим наименьший элемент }
   minValue := a[1];
   minInd := 1;
   for i := 2 to 19 do
@@ -50,7 +48,6 @@ begin
     end;
   end;
 
-  { Удаляем наименьший элемент }
   for i := minInd to 19 do
   begin
     a[i] := a[i+1];
