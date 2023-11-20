@@ -1,9 +1,4 @@
-﻿{3.	Сформировать одномерный массив из 20 целых чисел из диапазона [-52,65] 
-случайным образом. Найти наибольший элемент массива и его номер (при условии, что все элементы массива различны). 
-}
-
-
-var a:array[1..20] of integer;
+﻿var a:array[1..20] of integer;
 i: integer;
 s: integer;
 x: integer;
@@ -16,12 +11,12 @@ begin
   y:=0;
   
   for i:=1 to s do 
-    a[i] := Random(-52,65);
+    a[i] := Random(-5,5);
   for i:=1 to s do
     write(a[i],' ');
   
-  for i:= 1 to s do
-    if (a[i] > x1) and (a[i]>0) then begin
+  for i:= s downto 1 do
+    if (a[i] > x1) and (a[i]>0) then begin {ВЫВОДИТ ИНДЕКС ПОСЛЕДНЕГО НАИБОЛЬШЕГО}
       x1:= a[i];
       y:=i;
       end;
@@ -44,5 +39,3 @@ writeln('итог',x,' ',y);
         
 writeln('итог',x,' ',y);    
 end.
-
-
